@@ -1,0 +1,62 @@
+[
+	{
+		"title": "Mesa",
+		"description": "Mesa de madera",
+		"price": 67890,
+		"category": "home",
+		"thumbnail": "../img2.jpg",
+		"code": "prod2",
+		"stock": 3,
+		"id": "46d90d41-04ec-491e-b8ca-ac2a43120066"
+	},
+	{
+		"title": "silla",
+		"description": "silla de madera",
+		"price": 66890,
+		"category": "home",
+		"thumbnail": "../img3.jpg",
+		"code": "prod3",
+		"stock": 5,
+		"id": "2a682e86-da16-4adf-ab9a-dbfbfa218bbd"
+	},
+	{
+		"title": "colchon",
+		"description": "colchon acolchado",
+		"price": 167890,
+		"category": "home",
+		"thumbnail": "../img5.jpg",
+		"code": "prod4",
+		"stock": 2,
+		"id": "04ecc1ff-603b-4e5a-aec2-4d22ddc8a141"
+	},
+	{
+		"title": "hamaca",
+		"description": "hamaca para dormir",
+		"code": "22",
+		"price": "23000",
+		"stock": "3",
+		"category": "dormir",
+		"thumbnail": "/img.4",
+		"id": "42ad0bf5-b6bb-4beb-996f-38e401a92ab8"
+	},
+	{
+		"title": "reposera",
+		"description": "sentarse a descansar",
+		"code": "7",
+		"price": "1009",
+		"stock": "5",
+		"category": "descanso",
+		"thumbnail": "/img.5",
+		"id": "9cbf4443-afb4-4cb4-8cde-98e9aaddffda"
+	},
+	{
+		"title": "cocina",
+		"description": "cocina description",
+		"code": "8",
+		"price": "10000",
+		"stock": "4",
+		"category": "casa",
+		"thumbnail": "/img.6",
+		"id": "5cdd1f87-1f3d-4df9-8ba1-e96280b84cf2"
+	}
+]

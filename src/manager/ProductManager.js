@@ -1,3 +1,4 @@
+import { randomUUID } from 'crypto'
 import fs from 'fs'
 
 export default class ProductManager {
@@ -21,25 +22,31 @@ export default class ProductManager {
       return console.log('no hay productos en el archivo')
     } else {
       const productById = products.find((p) => p.id === id)
-      productById ? productById : console.log('Not found')
+      return productById
     }
   }
 
   addProducts = async (product) => {
+    console.log(product)
+    const requiredFields = ['title', 'description', 'price', 'thumbnail', 'code', 'stock', 'category']
+    const missingFields = requiredFields.filter(field => !(field in product))
+
+    if(missingFields.length > 0){
+      return console.log(`Los siguientes campos son obligatorios: ${missingFields.join(', ')}`);
+    }
+
     const products = await this.getProducts()
     const prodExists = products.find((p) => p.code === product.code)
     if (!prodExists) {
-      if (products.length === 0) {
-        product.id = 1
-      } else {
-        product.id = products[products.length - 1].id + 1
-      }
+      product.id = randomUUID()
       products.push(product)
       await fs.promises.writeFile(
         this.path,
         JSON.stringify(products, null, '\t')
       )
       return products
+    }else{
+      return console.log('producto ya existe')
     }
   }
 
